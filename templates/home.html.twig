@@ -3,7 +3,21 @@
       <link rel="stylesheet" href="{{ asset('build/app.css') }}">
   {% endblock %}
     {% block body %}
-        cc
+        <div class="container"><h1>Les idées !</h1>
+        </div>
+        <form class="container" method="POST" action="/addIdea">
+            <h2>Proposer une idée</h2>
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" name="title" id="title">
+            </div>
+            <div class="form-group">
+                <label for="comment">Description:</label>
+                <textarea name="description" class="form-control" rows="5" id="comment"></textarea>
+            </div>
+            <button name="subbtn">Envoyer</button>
+        </form>
+
     {% endblock %}
 {% block javascripts %}
     <script src="{{ asset('build/app.js') }}"></script>
